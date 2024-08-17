@@ -4,6 +4,12 @@ function Stopwatch(){
 
     const[timer,setTimer]=useState(0);
     const[isRunning, setIsRunning]=useState(false);
+    const formatTime=(seconds)=>{
+        const minutes= Math.floor(seconds/60);
+        const secs=seconds%60;
+        return `${minutes}: ${secs}`;
+
+    }
 
     useEffect(()=>{
         let interval;
@@ -22,7 +28,7 @@ function Stopwatch(){
     return (
        <div>
         <h1>StopWatch</h1>
-        <h2>Time:{timer} </h2>
+        <h2>Time:{formatTime(timer)} </h2>
         <button onClick={()=>setIsRunning((prev)=>!prev)}>{isRunning?"Stop":"Start"}</button>
         <button onClick={()=>{
             setTimer(0);
