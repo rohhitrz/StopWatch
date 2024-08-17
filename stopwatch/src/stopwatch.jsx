@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 function Stopwatch(){
 
     const[timer,setTimer]=useState(0);
-    const[isRunning, setIsRunning]=useState(false);
+    const[isRunning, setIsRunning]=useState(false); //boolean
     const formatTime=(seconds)=>{
         const minutes= Math.floor(seconds/60);
         const secs=seconds%60;
