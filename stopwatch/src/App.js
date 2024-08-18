@@ -1,5 +1,5 @@
 
-import './App.css';
+
 import Stopwatch from './stopwatch';
 
 function App() {
