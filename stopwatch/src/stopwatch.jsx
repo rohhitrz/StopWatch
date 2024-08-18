@@ -33,7 +33,7 @@ function Stopwatch(){
         <button onClick={()=>{
             setTimer(0);
             setIsRunning(false);
-        }}>reset</button>
+        }}>Reset</button>
         </div>
     )
 }
